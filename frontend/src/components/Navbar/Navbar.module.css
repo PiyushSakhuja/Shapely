@@ -1,0 +1,97 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--app-border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--app-fg);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--app-accent), var(--app-accent-2));
+  color: white;
+  box-shadow: 0 6px 18px -8px var(--app-accent);
+}
+
+.brandText {
+  font-size: 1.05rem;
+}
+
+.brandDot {
+  color: var(--app-accent);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.link {
+  color: var(--app-fg-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--app-fg);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--app-fg);
+  color: var(--app-bg);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.15s ease;
+  box-shadow: 0 4px 14px -6px rgba(15, 23, 42, 0.5);
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  background: var(--app-accent);
+  box-shadow: 0 8px 20px -6px var(--app-accent);
+}
+
+@media (max-width: 640px) {
+  .link {
+    display: none;
+  }
+  .inner {
+    padding: 12px 16px;
+  }
+}

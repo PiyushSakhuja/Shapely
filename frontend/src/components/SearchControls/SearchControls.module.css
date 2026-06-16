@@ -1,0 +1,108 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.brushGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  flex: 1;
+}
+
+.brushLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--app-fg-muted);
+  letter-spacing: 0.02em;
+}
+
+.brushSlider {
+  flex: 1;
+  accent-color: var(--app-accent);
+  cursor: pointer;
+}
+
+.brushValue {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--app-fg-muted);
+  min-width: 38px;
+  text-align: right;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ghost,
+.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease,
+    box-shadow 0.2s ease, color 0.15s ease, border-color 0.15s ease;
+  font-family: inherit;
+}
+
+.ghost {
+  background: transparent;
+  color: var(--app-fg);
+  border-color: var(--app-border);
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--app-bg-soft);
+  border-color: var(--app-border-strong);
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--app-accent), var(--app-accent-2));
+  color: white;
+  box-shadow: 0 8px 20px -10px var(--app-accent);
+}
+
+.primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -10px var(--app-accent);
+}
+
+.ghost:disabled,
+.primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 560px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .buttonGroup {
+    justify-content: stretch;
+  }
+  .buttonGroup > * {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,70 @@
+.wrap {
+  margin-top: 36px;
+  padding: 48px 24px;
+  text-align: center;
+  background: var(--app-surface);
+  border: 1px dashed var(--app-border-strong);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.error {
+  border-style: solid;
+  border-color: #fecaca;
+  background: #fff5f5;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--app-accent), var(--app-accent-2));
+  color: white;
+  margin-bottom: 4px;
+  box-shadow: 0 12px 24px -14px var(--app-accent);
+}
+
+.error .icon {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  box-shadow: 0 12px 24px -14px #ef4444;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--app-fg);
+}
+
+.message {
+  margin: 0;
+  max-width: 420px;
+  color: var(--app-fg-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.retry {
+  margin-top: 8px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  background: var(--app-fg);
+  color: var(--app-bg);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+.retry:hover {
+  transform: translateY(-1px);
+  background: var(--app-accent);
+}
